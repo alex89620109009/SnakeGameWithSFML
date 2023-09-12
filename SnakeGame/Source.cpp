@@ -5,13 +5,15 @@ using namespace sf;
 int main()
 {
 
-    RenderWindow window(VideoMode(400, 400), L"Snake Game", Style::Default);
+    RenderWindow window(VideoMode(1000, 1000), L"Snake Game", Style::Default);
 
     window.setVerticalSyncEnabled(true);
     SnakeHead head;
     sf::Texture texture;
-    texture.loadFromFile("C:/Users/Alexander/Downloads/1e31694cd93e4a2d6208215801c98a2d.jpg");
+    texture.loadFromFile("C:/Users/Alexander/source/repos/SnakeGame/SnakeGame/Sprites/SnakeHeadTexture.jpg");
+    head.setPosition(500, 500);
     head.setTexture(texture);
+    
 
     while (window.isOpen())
     {
@@ -23,6 +25,7 @@ int main()
         }
 
         head.MoveHead();
+        window.clear();
         window.draw(head);
         window.display();
     }
