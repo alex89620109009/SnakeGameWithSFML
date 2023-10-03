@@ -9,6 +9,12 @@ private:
 	std::vector<std::vector<sf::RectangleShape>> gridMap;
 
 public:
+	std::vector<std::vector<sf::RectangleShape>> getVector() {
+		return gridMap;
+	};
+	int getGridSize() {
+		return sizeGrid;
+	}
 	void fillingVector(sf::RenderWindow& window);
 	void drawGrid(sf::RenderWindow& window);
 };

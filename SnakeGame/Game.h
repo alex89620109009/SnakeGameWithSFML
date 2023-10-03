@@ -2,6 +2,7 @@
 #define GAME_H
 #include "GameGrid.h"
 #include <iostream>
+#include "SnakeHead.h"
 class Game
 {
 private:
