@@ -2,12 +2,20 @@
 void Game::start() {
 	GameGrid grid;
 	SnakeHead snake;
+	
+
+	
 	snake.setSize(sf::Vector2f(25,25));
 	snake.setFillColor(sf::Color::Red);
 	grid.fillingVector(window);
+	st::CondtrolSnakeTail tail;
+	tail.addToMap();
+	
+	
 
 	std::vector<std::vector<sf::RectangleShape>> gridMap = grid.getVector();
 	while (window.isOpen()) {
+		
 		sf::Event event;
 		while (window.pollEvent(event)) {
 			if (event.type == sf::Event::Closed)
@@ -16,9 +24,17 @@ void Game::start() {
 		window.clear(sf::Color::Black);
 		
 		grid.drawGrid(window);
-		snake.drawHead(gridMap);
+		
+		
+		
+		snake.controlSnake(gridMap);
+		tail.moveTail(snake, window, gridMap);
 		window.draw(snake);
+		
 		window.display();
+		
+		
+		
 	}
 }
 

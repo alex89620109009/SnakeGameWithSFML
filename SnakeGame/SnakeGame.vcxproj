@@ -23,11 +23,13 @@
     <ClCompile Include="GameGrid.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="SnakeHead.cpp" />
+    <ClCompile Include="SnakeTail.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameGrid.h" />
     <ClInclude Include="SnakeHead.h" />
+    <ClInclude Include="SnakeTail.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

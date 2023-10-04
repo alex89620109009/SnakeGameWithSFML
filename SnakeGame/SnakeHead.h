@@ -3,6 +3,7 @@
 #include "SFML/Graphics.hpp"
 #include "windows.h"
 
+
 class SnakeHead :public sf::RectangleShape
 {
 private:
@@ -11,10 +12,14 @@ private:
 	char direction = 'D';
 	void moveHead(std::vector<std::vector<sf::RectangleShape>>& gridMap) ;
 	bool startGameFlag = true;
-	
+	void borderControl(std::vector<std::vector<sf::RectangleShape>>& gridMap);
 public:
-
-	void drawHead(std::vector<std::vector<sf::RectangleShape>>& gridMap);
+	int getIndexI(){return iIndexForGrid;}
+	int getIndexJ() { return jIndexForGrid; }
+	char getDirection() {return direction;}
+	bool getStartGameFlag() { return startGameFlag; }
+	void setStartGameFlag(bool flag) { startGameFlag = flag; }
+	void controlSnake(std::vector<std::vector<sf::RectangleShape>>& gridMap);
 };
 #endif // !SNAKEHEAD_H
 

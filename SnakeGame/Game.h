@@ -3,6 +3,7 @@
 #include "GameGrid.h"
 #include <iostream>
 #include "SnakeHead.h"
+#include "SnakeTail.h"
 class Game
 {
 private:
@@ -18,5 +19,6 @@ public:
 	}
 	void setWindowTitle(std::string name) { windowTitle = name; }
 	void start();
+	
 };
 #endif // !GAME_H
