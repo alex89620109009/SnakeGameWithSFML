@@ -4,6 +4,6 @@ int main()
 {
 
     Game game;
-    game.start();
+    game.start(500,400,"Snake Game");
     return 0;
 }

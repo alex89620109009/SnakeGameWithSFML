@@ -1,14 +1,15 @@
 #include "Game.h"
-void Game::start() {
+void Game::start(int windowWidth = 500, int windowHeight = 400, std::string windowTitle = "Snake tail") {
+	sf::RenderWindow window( sf::VideoMode(windowWidth, windowHeight), windowTitle );
 	GameGrid grid;
-	SnakeHead snake;
+	snake::SnakeHead snake;
 	
 
 	
 	snake.setSize(sf::Vector2f(25,25));
-	snake.setFillColor(sf::Color::Red);
 	grid.fillingVector(window);
-	st::CondtrolSnakeTail tail;
+	snake.setFillColor(sf::Color::Red);
+	snake::CondtrolSnakeTail tail;
 	tail.addToMap();
 	
 	
